@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+
+    <style>
+
+        #container {
+            /*A de cima coloca em posicionamento relativo e a de baixo em posicionamento absoluto*/
+
+            height: 94vh;
+            background-color: purple;
+            padding: 10px;
+            position: relative;
+
+            /*position: relative - permite mover elementos visualmente em relação à sua posição original no layout sem afetar o fluxo normal dos outros elementos. o elemento ainda ocupa o espaço que ele teria ocupado originalmente no layout, mas você pode movê-lo visualmente usando propriedades como top, right, bottom e left.*/
+
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+        }
+
+        #conteudo {
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: absolute;
+
+            /*Quando coloca o position absolut, podemos controlar melhor com os parâmetros abaixo*/
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+ <!--Para alinhamento vertical, precisa de container e conteudo?-->
+ 
+    <section id="container">
+
+        <article id="conteudo">
+
+        </article>
+
+    </section>
+    
+</body>
+
+</html>
