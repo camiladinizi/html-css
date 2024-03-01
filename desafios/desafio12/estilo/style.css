@@ -63,6 +63,10 @@ section {
     /*line-height - espaçamento entre as linhas*/
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal {
     background-color: white;
     color: black;
@@ -71,13 +75,34 @@ section.normal {
 section.imagem {
     background-color: rgb(29, 29, 29);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.534);
+    background-size: cover;
 
 }
 
 section.imagem > p {
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 8px;
     display: inline-block;
+    border-radius: 10px;
+    text-shadow: 1.5px 1.5px 0px black; /*vertical > horizontal > espalhamento > cor*/
+
+    /*Inline-block: usada para alterar o comportamento padrão de elementos de bloco (como <div>, <p>, <h1>, etc.) para se comportarem como elementos inline, mas ainda mantendo algumas características de elementos de bloco.*/
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+    background-attachment: fixed; /*efeito parallax*/
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+    background-attachment: fixed;
+
+    /*backgroun: cover - uma forma de dimensionar uma imagem de fundo para cobrir completamente o elemento de contêiner, mantendo a proporção da imagem e garantindo que ela não seja distorcida.*/
+
 }
 
 footer {
